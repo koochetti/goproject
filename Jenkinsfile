@@ -3,7 +3,7 @@ pipeline
   	  agent any
 	  
 	    stages
-	    {
+	    {   
 		stage('cloning go file')
 		{
 		  steps
@@ -15,7 +15,10 @@ pipeline
 			}
 			 dir('gomain')
                        {
-                          sh '''go run main.go'''
+			  export PATH=$PATH:/goroot/bin:/gopath/bin
+			  
+                          sh '''go build main.go
+				go run main.go'''
                         }
 
 		   }
