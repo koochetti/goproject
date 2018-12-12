@@ -15,9 +15,10 @@ pipeline
 			}
 			 dir('gomain')
                        {
-			  export PATH=$PATH:/goroot/bin:/gopath/bin
 			  
-                          sh '''go build main.go
+			  
+                          sh '''export PATH=$PATH:/goroot/bin:/gopath/bin
+			  go build main.go
 				go run main.go'''
                         }
 
