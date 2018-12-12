@@ -1,7 +1,7 @@
 pipeline
 	{
   	  agent any
-	  {
+	  
 	    stages
 	    {
 		stage('cloning go file')
@@ -22,4 +22,4 @@ pipeline
 		}
 	     }
 	   }
-	}
+	
