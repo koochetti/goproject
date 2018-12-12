@@ -11,7 +11,7 @@ pipeline
 		       sh 'mkdir -p gomain'
 		       dir('gomain')
 		       {
-		          sh ''' https://github.com/koochetti/gomain.git '''
+		          sh '''git clone https://github.com/koochetti/gomain.git master '''
 			}
 			 dir('gomain')
                        {
